@@ -38,7 +38,7 @@ for target in $all_targets; do
 done
 targets=""
 for target in $all_targets; do
-  clean_target=$(echo $target | sed 's/-eng/-userdebug/' | sed 's/aosp_//')
+  clean_target=$(echo $target | sed 's/-eng/-userdebug/' | sed 'sdoraemon_//')
   if [[ $clean_target != $target ]] && [[ ${targets_map[$clean_target]} == $clean_target ]]; then
     echo "Ignoring $target in favor of $clean_target"
   else
